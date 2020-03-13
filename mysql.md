@@ -39,3 +39,6 @@ ADD CONSTRAINT `blogs_ibfk_1`
   ON UPDATE CASCADE;
 
 ```
+
+# 连接池
+
