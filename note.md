@@ -7,3 +7,7 @@
 * git pull origin master --allow-unrelated-histories
 * cross-env 抹平环境变量
 * cross-env NODE_ENV=dev
+
+# koa2开发环境
+* 配置 eslint 以及 pre-commit
+* inspect 调试
