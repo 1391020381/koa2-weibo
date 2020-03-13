@@ -23,3 +23,19 @@ foreign key(deptnames) references department(dept_name));
 
 
 # sequelize
+
+* mysqlworkbench -> database -> reverse enginneer database 制作  eerdiagram 即 表之间的关系
+
+* 级联关系  ON DELETE CASCADE ON UPDATE CASCADE;
+```
+
+ALTER TABLE `koa2-weibo`.`blogs` 
+DROP FOREIGN KEY `blogs_ibfk_1`;
+ALTER TABLE `koa2-weibo`.`blogs` 
+ADD CONSTRAINT `blogs_ibfk_1`
+  FOREIGN KEY (`userId`)
+  REFERENCES `koa2-weibo`.`users` (`id`)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE;
+
+```
