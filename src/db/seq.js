@@ -1,18 +1,32 @@
-const Sequelize = require('sequelize')
+/**
+ * 
+ * @description 存储配置
+ * 
+ */
 
+const Sequelize = require('sequelize')
+const {MYSQL_CONF} = require('../conf/db')
+const {isProd,isTest}  = require('../utils/env')
+const {host,user,password,database} = MYSQL_CONF
 const conf = {
-    host:'localhost',
+    host,
     dialect:'mysql'
 }
-conf.pool = {
-    max:5,  // 允许连接池中最大的连接数
-    min:0,
-    idle:10000    // 如果一个连接池 10s 之内没有使用 则被释放。
+if(isTest){
+    conf.logging = ()=>{}
 }
-const sequelize = new Sequelize('koa2-weibo','root','root',conf)
+if(isProd){
+    conf.pool = {
+        max:5,  // 允许连接池中最大的连接数
+        min:0,
+        idle:10000    // 如果一个连接池 10s 之内没有使用 则被释放。
+    }
+}
+
+const sequelize = new Sequelize(database,user,password,conf)
 
 
 
 
 
- module.exports = sequelize
+module.exports = sequelize

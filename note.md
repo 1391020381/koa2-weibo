@@ -11,3 +11,10 @@
 # koa2开发环境
 * 配置 eslint 以及 pre-commit
 * inspect 调试
+
+
+* babel-eslint eslint  
+* .eslintignore  .eslintrc.json 
+* 配置完这些在 vscode 中标示与eslint不符的代码。 保存即可以格式化
+
+* pre-commit 提交前校验文件格式
