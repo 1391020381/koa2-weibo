@@ -10,7 +10,8 @@
 
 # koa2开发环境
 * 配置 eslint 以及 pre-commit
-* inspect 调试
+* inspect 调试   在script中添加 --inspect   
+* chrome://inspect/#devices
 
 
 * babel-eslint eslint  
@@ -18,3 +19,10 @@
 * 配置完这些在 vscode 中标示与eslint不符的代码。 保存即可以格式化
 
 * pre-commit 提交前校验文件格式
+
+
+# cookie session
+
+# jwt jsonwebtoken
+* 用户认证成功后,server端返回一个加密的token给客户端
+* 客户端后续每次请求都带token,以示当前的用户身份
